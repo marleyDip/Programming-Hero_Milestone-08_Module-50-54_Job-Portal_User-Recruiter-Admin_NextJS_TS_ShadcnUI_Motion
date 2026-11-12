@@ -641,13 +641,15 @@ function NavbarMegaContent() {
       </header>
 
       <SearchPalette
-        key={searchOpen ? "open" : "closed"}
+        // key={searchOpen ? "open" : "closed"}
+        // key="search-palette"
         open={searchOpen}
         onClose={() => setSearchOpen(false)}
       />
 
       <MobileDrawer
-        key={drawer ? "open" : "closed"}
+        // key={drawer ? "open" : "closed"}
+        // key="mobile-drawer"
         open={drawer}
         onClose={() => setDrawer(false)}
       />
@@ -1426,6 +1428,7 @@ function MobileDrawer({
 
             <div className="relative grid shrink-0 gap-2 border-t border-white/[0.07] p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
               <PostJobButton fullWidth />
+
               <Link
                 href="/sign-in"
                 className="grid h-12 place-items-center rounded-xl border border-white/10 text-[15px] font-medium text-white transition-colors outline-none hover:bg-white/6 focus-visible:ring-2 focus-visible:ring-[#8f88ff]"

@@ -10,7 +10,7 @@ export const auth = betterAuth({
     client,
   }),
 
-  baseURL: process.env.BETTER_AUTH_URL,
+  // baseURL: process.env.BETTER_AUTH_URL,
 
   emailAndPassword: {
     enabled: true,
@@ -19,6 +19,7 @@ export const auth = betterAuth({
   user: {
     additionalFields: {
       role: {
+        // type: "string",
         type: ["seeker", "recruiter", "admin"],
         input: true,
         defaultValue: "seeker",
