@@ -1,15 +1,10 @@
-import { Geist, Geist_Mono } from "next/font/google"
+import { Geist } from "next/font/google"
 
+// import { Navbar } from "@/components/navbar"
+import { NavbarMega } from "@/components/navbar-mega"
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'})
-
-const fontMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-})
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" })
 
 export default function RootLayout({
   children,
@@ -17,13 +12,16 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", geist.variable)}
-    >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
+    <html lang="en" suppressHydrationWarning className={geist.variable}>
+      <body className="bg-[#010103] font-sans">
+        {/* <Navbar /> */}
+        {/* <main className="pt-28">{children}</main> */}
+
+        {/* in app/layout.tsx. It's sticky, so no top padding is
+        needed. */}
+        <NavbarMega />
+        <main className="">{children}</main>
+        {/* <ThemeProvider>{children}</ThemeProvider> */}
       </body>
     </html>
   )
