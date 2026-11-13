@@ -1,6 +1,7 @@
 import { Geist } from "next/font/google"
 
 // import { Navbar } from "@/components/navbar"
+import { Footer } from "@/components/footer"
 import { NavbarMega } from "@/components/navbar-mega"
 import "./globals.css"
 
@@ -22,6 +23,8 @@ export default function RootLayout({
         <NavbarMega />
         <main className="">{children}</main>
         {/* <ThemeProvider>{children}</ThemeProvider> */}
+
+        <Footer />
       </body>
     </html>
   )
